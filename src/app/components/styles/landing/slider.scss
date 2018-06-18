@@ -1,0 +1,29 @@
+.slider-content{
+  overflow: hidden;
+  width:2500px;
+  height:100px;
+  display: inline-block;
+  transition: 1s all;
+}
+.items{
+  margin:auto;
+  width:250px;
+  height:100px;
+  display: inline-block;
+}
+.slider{
+  margin:auto;
+  overflow: hidden;
+  display: block;
+  width:auto;
+  height:100px;
+  background:#26B658;
+}
+.logo-img{
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100px;
+  opacity: .6;
+}

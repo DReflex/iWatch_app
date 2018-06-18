@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import State from './state'
+import Watch from './state'
+import Test from './test'
 
-const iWatch = combineReducers({
-  State
+const watchApp = combineReducers({
+  Watch,
+  Test
 })
 
-export default iWatch
+export default watchApp

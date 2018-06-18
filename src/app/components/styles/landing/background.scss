@@ -1,0 +1,23 @@
+.backOl{
+  width: 100%;
+  background:linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.6)), url(http://img.photobucket.com/albums/v190/claudiom/mm.jpg) center center no-repeat;
+  background-size: cover;
+}
+.ol{
+  margin:auto;
+  padding:200px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  color:#FFF;
+}
+.ol h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.ol button{
+  margin:auto;
+  width:100px;
+}

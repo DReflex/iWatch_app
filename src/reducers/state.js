@@ -1,22 +1,61 @@
 const stateInit ={
-  nav:"transparent",
-  error:false
+  mouse:Boolean,
+  counter:0,
+  item_width:0,
+  clear:Boolean,
+  xStart:0,
+  xCurrent:0,
+  throttle_flag:Boolean,
+
+
 }
-const State = (state = stateInit, action)=>{
+const Watch = (state = stateInit, action)=>{
   switch(action.type){
-    case "NAV":
+    case "CHECK":
     return{
       ...state,
-      nav:action.nav
+      test:action.bol
     }
-    case "ERROR":
+    case "CLICK":
     return{
       ...state,
-      error: action.error
+      mouse: action.mouse_down
+    }
+    case "THROTTLE":
+      return{
+        ...state,
+        throttle_flag: action.throttle
+      }
+
+    case "CLEAR":
+    return{
+      ...state,
+      clear: action.clear
+    }
+    case "START":
+    return{
+      ...state,
+      xStart:action.num
+    }
+    case "CURRENT":
+    return{
+      ...state,
+      xCurrent:action.num
+    }
+    case "COUNT":
+    return{
+      ...state,
+      counter: action.num
+    }
+    case "WIDTH":
+    return{
+      ...state,
+      item_width: action.num
     }
     default:
     return state
 
+
   }
 }
-export default State
+export default Watch

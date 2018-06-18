@@ -1,0 +1,29 @@
+.contact{
+  display:flex;
+  flex-direction: row;
+  width:95%;
+  justify-content: space-around;
+}
+.contact-p{
+  font-size: .9rem;
+  opacity: .7;
+}
+.iLogo{
+  padding:20px 0;
+}
+.iWatch, .contactUS{
+  width:40%;
+  padding:50px 0px;
+}
+.contactUS h1{
+  font-size: 1.5rem;
+  padding:20px 0;
+
+}
+.copyrights{
+  color: #1eb858;
+  display: flex;
+  width:95%;
+  justify-content: flex-start;
+  margin:auto;
+}

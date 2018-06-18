@@ -1,0 +1,53 @@
+.landing{
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  width:100%;
+  height:auto;
+  margin:auto;
+  background-color: #F3F3F3;
+  font-family: 'Roboto', sans-serif;
+
+}
+.landing .landingImage{
+  margin: auto;
+  width: 40%;
+}
+.landing .landingImage img{
+  width:80%;
+  height:auto;
+}
+.landing .landingHeading{
+  margin: auto;
+  padding:100px 30px;
+  width: 50%;
+  justify-content: center;
+}
+.landing .landingHeading h1{
+  font-weight: 700;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+.landing .landingHeading p{
+  opacity:0.5;
+}
+.input{
+  display: flex;
+  margin:auto;
+  padding-top: 30px;
+}
+.input input{
+  margin:0;
+  border: none;
+  padding: 10px 20px;
+  background-color: #F9F9F9;
+
+}
+.input button{
+  margin:0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input button:hover, :focus{
+  outline: none;
+}

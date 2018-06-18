@@ -1,0 +1,51 @@
+.plan{
+  padding:50px 0;
+}
+.plan-cards{
+  display: flex;
+  margin:auto;
+  justify-content: space-around;
+  width: 95%;
+  flex-direction: row;
+}
+.card{
+  width:25%;
+  padding:50px 0px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border:none;
+  box-shadow: 0 0 80px 0 rgba(0,0,0,.1);
+}
+.card:hover{
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+}
+.card i{
+  font-size: 65px;
+  color: #1eb858;
+  padding: 20px 0;
+}
+.card h3{
+  font-size: 1.3rem;
+  padding:10px 0;
+  font-weight: bold;
+}
+.card h2{
+  font-size: 1.7rem;
+  padding: 10px 0;
+  opacity:0.7;
+}
+.card p{
+  margin:auto;
+  font-size: 1rem;
+  padding: 10px 0;
+  opacity:0.7;
+  width:60%;
+}
+.card button{
+  margin:auto;
+  margin-top:20px;
+}
+.card-mid{
+  margin-top:-40px;
+  margin-bottom:40px;
+}

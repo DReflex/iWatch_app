@@ -1,0 +1,35 @@
+.navbar{
+  padding: 15px 65px;
+  transition: .5s all;
+  background-color: #F3F3F3;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.7);
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    padding:10px 15px;
+
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.3);
+    transition:  all .5s;
+}
+.bg-light {
+    background-color: #F3F3F3 ;
+}
+.logo{
+  margin:0;
+  display: inline-block;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding:0;
+
+}
+.ip{
+  margin:0;
+  color:rgb(72, 207, 0);
+  font-weight: 900;
+  font-size: 28px;
+  padding:0;
+}
