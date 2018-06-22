@@ -18,6 +18,7 @@ class Review extends React.Component{
     this.props.dispatch(functionFlag(false));
     this.props.dispatch(stopFunction(false));
     this.props.dispatch(mouse(false));
+    setTimeout(this.review, 1000)
   }
   handleDown(e, type){
     e.preventDefault();
@@ -97,7 +98,7 @@ class Review extends React.Component{
 
         }
         else if(moveTo < -((item_width*2) + 100)){
-          document.getElementById("slideR").style.transform = "translate3d(-"+ (item_width*2 + (100))+", 0, 0)" ;
+          document.getElementById("slideR").style.transform = "translate3d(-"+ (item_width*2 )+", 0, 0)" ;
 
         }else {
 
@@ -110,12 +111,12 @@ class Review extends React.Component{
 
   }
   review(){
-  console.log( window.innerWidth * 0.6);
   let itemWidth;
-  if(window.innerWidth > 720){
-    itemWidth = window.innerWidth * 0.6
+  if(document.body.clientWidth > 720){
+    itemWidth = document.body.clientWidth * 0.6
   }else {
-    itemWidth = window.innerWidth
+    itemWidth = document.body.clientWidth
+    console.log(itemWidth);
   }
   this.props.dispatch(review_width(itemWidth))
   }
@@ -148,7 +149,7 @@ class Review extends React.Component{
   render(){
     return(
       <div style={{width:this.props.review_width}} className="review">
-        <div onMouseMove={(e) => this.handleMove(e)} onMouseUp={(e)=> this.handleDown(e, "up")} onMouseDown={(e) => this.handleDown(e)} id="slideR" className="review-c">
+        <div  onMouseMove={(e) => this.handleMove(e)} onMouseUp={(e)=> this.handleDown(e, "up")}  onMouseDown={(e) => this.handleDown(e)} id="slideR" className="review-c">
           <div style={{width:this.props.review_width}} className="single-r">
             <img src="http://www.m2mglobal.sg/wp-content/uploads/2015/06/avatar11.jpg" alt="" />
             <p>Etiam est nisl, molestie sed egestas bibendum, varius eu diam. Suspendisse est metus, ultrices sit amet dolor in, rhoncus malesuada mi.</p>
