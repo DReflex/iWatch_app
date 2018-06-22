@@ -110,6 +110,9 @@ class Review extends React.Component{
     }
 
   }
+  handleTouch(e){
+    console.log(e.screenX);
+  }
   review(){
   let itemWidth;
   if(document.body.clientWidth > 720){
@@ -149,7 +152,7 @@ class Review extends React.Component{
   render(){
     return(
       <div style={{width:this.props.review_width}} className="review">
-        <div  onMouseMove={(e) => this.handleMove(e)} onMouseUp={(e)=> this.handleDown(e, "up")}  onMouseDown={(e) => this.handleDown(e)} id="slideR" className="review-c">
+        <div onPointerMove={(e) =>this.handleTouch(e)} onMouseMove={(e) => this.handleMove(e)} onMouseUp={(e)=> this.handleDown(e, "up")}  onMouseDown={(e) => this.handleDown(e)} id="slideR" className="review-c">
           <div style={{width:this.props.review_width}} className="single-r">
             <img src="http://www.m2mglobal.sg/wp-content/uploads/2015/06/avatar11.jpg" alt="" />
             <p>Etiam est nisl, molestie sed egestas bibendum, varius eu diam. Suspendisse est metus, ultrices sit amet dolor in, rhoncus malesuada mi.</p>
