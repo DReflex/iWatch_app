@@ -1,0 +1,240 @@
+/*Responsivity all fixes regarding width and flex direction top to bottom easy to follow*/
+@media screen and (max-width: 760px) {
+
+  .landing{
+    flex-direction: column;
+
+  }
+  .input{
+    flex-direction: column;
+  }
+  .input button{
+    margin:auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .landing .landingHeading{
+    width:95%;
+  }
+  .landing .landingHeading h1{
+    font-size: 32px;
+  }
+  .landing .landingImage{
+    width:80%;
+    margin:auto;
+  }
+  .slider, .slider-content, .items{
+    height:80px;
+  }
+  .heading{
+    margin:50px auto;
+  }
+  .heading h1{
+    font-size: 30px;
+  }
+  .heading p{
+    font-size: 12px;
+  }
+  .content{
+    flex-direction: column;
+  }
+  .layer1{
+    width:80%;
+    margin: auto;
+  }
+  .layer-img{
+    width:80%;
+  }
+  .feature-design{
+    flex-direction: column;
+  }
+  .left{
+    width:80%;
+    margin:auto;
+  }
+  .right{
+    width:80%;
+    margin:auto;
+  }
+  .right h1{
+    width:80%;
+    text-align: center;
+    font-size: 30px;
+  }
+  .right p{
+    width:80%;
+    font-size: 12px;
+  }
+  .right ul{
+    width:80%;
+    font-size: 12px;
+  }
+  .left1{
+    width:80%;
+    margin:auto;
+  }
+  .right1{
+    width:80%;
+    margin:auto;
+  }
+  .right1 h1{
+    width:80%;
+    text-align: center;
+    font-size: 30px;
+  }
+  .right1 p{
+    width:80%;
+    font-size: 12px;
+  }
+  .right1 ul{
+    width:80%;
+    font-size: 12px;
+  }
+  .awesome{
+    padding:30px 0;
+  }
+  .awesome-items{
+    flex-direction: column;
+  }
+  .layer-content{
+    margin:25px auto;
+  }
+  .ol{
+    padding:50px
+  }
+  .ol h1{
+    font-size: 20px;
+  }
+  .review{
+    width:80%;
+    margin-top:50px;
+  }
+  /*change animation to fit better change it later with js*/
+  .review-c{
+    margin-left: 0;
+  }
+  .single-r{
+    margin:0;
+  }
+  .plan-cards{
+    flex-direction: column;
+  }
+  .card{
+    width:80%;
+    margin:30px auto;
+  }
+  .input-fix{
+    flex-direction: column;
+  }
+  .input-fix input{
+    border-radius:5px;
+    margin:10px;
+    height:30px;
+  }
+  .input-fix button{
+    border-radius:5px;
+  }
+  .contactUS{
+    display: none;
+  }
+  .contact{
+    margin:auto;
+  }
+  .iWatch{
+    width:90%;
+    margin:auto;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+}
+@keyframes fade-in{
+  0% {
+       display: none;
+       opacity: 0;
+       transform: translate3d(0, 0, 0);
+   }
+
+   1% {
+       display: flex;
+       opacity: 0;
+       transform: translate3d(0, 50px, 0);
+   }
+
+   100% {
+       display: flex;
+       opacity: 1;
+       transform: translate3d(0, 0, 0);
+   }
+}
+//animation add class
+.landing-animation{
+  animation: fade-in 1s 0.3s both;
+}
+
+.animation-left{
+  animation:translate-left 1s both;
+  animation-delay: .4s;
+}
+.animation-right{
+  animation:translate-right 1s both;
+  animation-delay: .4s;
+}
+.animation-fade-down{
+  animation: fade-down 1s both;
+}
+//keyframes for all animations in home component
+@keyframes translate-left{
+  0%{
+    display:none;
+    opacity:0;
+    transform: translate3d(0,0,0);
+  }
+  1%{
+    display:none;
+    opacity:0;
+    transform: translate3d(50px,0,0);
+  }
+  100%{
+    display:block;
+    opacity:1;
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes translate-right{
+  0%{
+    display:none;
+    opacity:0;
+    transform: translate3d(0,0,0);
+  }
+  1%{
+    display:none;
+    opacity:0;
+    transform: translate3d(-50px,0,0);
+  }
+  100%{
+    display:block;
+    opacity:1;
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes fade-down{
+  0% {
+       display: none;
+       opacity: 0;
+       transform: translate3d(0, 0, 0);
+   }
+
+   1% {
+       display: flex;
+       opacity: 0;
+       transform: translate3d(0, -50px, 0);
+   }
+
+   100% {
+       display: flex;
+       opacity: 1;
+       transform: translate3d(0, 0, 0);
+   }
+}

@@ -29,7 +29,7 @@ class Slider extends React.Component{
     e.preventDefault()
     //console.log(this.props.mouse);
     if(type === "up"){
-      console.log("time starts up", this.props.clear);
+      // console.log("time starts up", this.props.clear);
       this.props.dispatch(mouseDown(false))
       this.handleMoveUp();
       setTimeout(()=> {
@@ -75,18 +75,17 @@ class Slider extends React.Component{
     return test
   }
     //split to get rid of num 3d then replace non num and devide because last 2 numbers are 2 0 vlues in 3d
-    var transformValues=[0, -240, -480, -720]
+    var transformValues=[0, -this.props.item_width, -(this.props.item_width * 2), -(this.props.item_width *3)]
     var transformTo = getClosest(currentValue, transformValues);
-    console.log("struggle", transformTo);
+    // console.log("struggle", transformTo);
     if(currentValue > 30){
       // console.log("30", currentValue);
       document.getElementById("slider-transform").style.transform = "translate3d(0px, 0px, 0px)"
     }
-    else if(currentValue < -720){
+    else if(currentValue < -this.props.item_width *3){
       // console.log("720");
       document.getElementById("slider-transform").style.transform = "translate3d(-720px, 0px, 0px)"
     }else{
-      console.log("wtf if this doesnt move");
      document.getElementById("slider-transform").style.transform= "translate3d(" + transformTo + "px, 0px, 0px)"
     }
 
@@ -102,7 +101,6 @@ class Slider extends React.Component{
 
       let initCounter =((this.props.counter === 0)? this.props.counter : (this.props.counter -1));
       // put this vars in state
-      console.log("this is new initCounter",initCounter);
         this.props.dispatch(xCurrent(e.screenX))
         let xMove = this.props.xCurrent - this.props.xStart
         let currentMove = -(item_width * initCounter)
@@ -126,7 +124,6 @@ class Slider extends React.Component{
   }
 
   slider(){
-    console.log("slider is called");
     this.props.dispatch(xThrottle(true))
       let id = document.getElementById("slider-transform")
       let item_width = this.props.item_width
@@ -142,7 +139,7 @@ class Slider extends React.Component{
             this.props.dispatch(counter(0))
           }else{
 
-            console.log("counter logger", counterStrike);
+            // console.log("counter logger", counterStrike);
             //create slider here
             let tStr = "translate3d( -" + item_width * counterStrike + "px, 0, 0)"
             document.getElementById("slider-transform").style.transform = tStr
@@ -159,18 +156,18 @@ class Slider extends React.Component{
     var itemCount = items.length;
     var itemLength =items[0].clientWidth;
     let window_width = document.body.clientWidth;
-    let item_width = window_width / 5;
+    let item_width;
+    if (window_width > 720) {
+      item_width = window_width/5
+    }else{
+      item_width = window_width / 2
+    }
     this.props.dispatch(width(item_width))
     this.props.dispatch(counter(0))
-
-    console.log(window_width, item_width);
-    console.log(items, itemLength);
   }
 
   render(){
     let items = ["https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png", "https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png","https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_500/v1/Global/Strategic%20Alliance/verizonpage3.png",]
-    let window_width = document.body.clientWidth;
-    let item_width = window_width / 5;
     let height = window.innerHeight;
     //dynamic width
 
@@ -178,7 +175,7 @@ class Slider extends React.Component{
     <div className="slider">
       <div onMouseMove={(e) => this.handleMove(e)} onMouseUp={(e)=> this.handleDown(e, "up")} onMouseDown={(e) => this.handleDown(e)} id="slider-transform" className="slider-content">
           {items.map((item, i) =>
-            <div key={i} style={{width: item_width}} className="items">
+            <div key={i} style={{width: this.props.item_width}} className="items">
               <img className="logo-img" src={item} alt="2" />
             </div>
           )}

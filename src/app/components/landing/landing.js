@@ -3,7 +3,7 @@ import '../styles/landing/landing.scss';
 
 class Landing extends React.Component{
   render(){
-    let height = window.innerHeight;
+    let height = (window.innerWidth < 720) ? "auto" : window.innerHeight
   return(
     <div>
       <div id="landing"  style={{height:height}} className="landing">

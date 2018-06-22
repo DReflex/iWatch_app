@@ -4,19 +4,18 @@
   margin:auto;
   margin-top: 150px;
   width:60%;
-  max-width: 700px;
   display: inline-block;
   overflow: hidden;
 }
 .review-c{
   display: flex;
   flex-direction: row;
-  width:2000px;
+  width:3000px;
   height:400px;
   background:#F3F3F3;
-  margin-left: 170px;
-  animation:review 10s infinite both;
+  // margin-left: 5%;
   outline-offset: 50px;
+  transition: 1s all;
 }
 .single-r{
   background:#f3f3f3;
@@ -25,7 +24,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin:auto 100px;
+  margin:auto 0px;
 }
 .single-r img{
   width:100px;
@@ -37,6 +36,8 @@
   letter-spacing: 1px;
   font-size: 12px;
   opacity: .7;
+  width:60%;
+  margin:auto;
 }
 .single-r h3{
   font-family: "Roboto", sans-serif;

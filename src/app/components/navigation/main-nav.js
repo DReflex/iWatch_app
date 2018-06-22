@@ -1,10 +1,35 @@
 import React from 'react';
-import '../styles/navigation/main_nav.scss'
+import '../styles/navigation/main_nav.scss';
 
 class Main_nav extends React.Component{
+  // constructor(){
+  //   super();
+  //   this.handleScroll = this.handleScroll.bind(this)
+  // }
+  // componentDidMount(){
+  //   this.handleScroll();
+  //   document.addEventListener("scroll", this.handleScroll)
+  // }
+  // componentWillUnmount(){
+  //   document.removeEventListener("scroll", this.handleScroll)
+  // }
+  // handleScroll(e){
+  //   console.log("scrolling");
+  //   console.log(document.getElementsByClassName("fade-in-animation"));
+  //   let id = document.getElementById("nav");
+  //   let scroll =window.pageYOffset;
+  //   if(scroll > 0){
+  //     id.style.background = "#FFF";
+  //     id.style.padding = "0 65px";
+  //   }
+  //   else{
+  //     id.style.background = "#F3F3F3";
+  //     id.style.padding = "15px 65px";
+  //   }
+  // }
   render(){
     return(
-      <div>
+      <div >
         <nav id="nav" className="navbar navbar-expand-md navbar-light fixed-top">
           <a className="navbar-brand" href="#">
             <p className="logo ip">i</p>
