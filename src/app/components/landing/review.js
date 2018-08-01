@@ -111,7 +111,7 @@ class Review extends React.Component{
 
   }
   handleTouch(e){
-    console.log(e.screenX);
+    // console.log(e.screenX);
   }
   review(){
   let itemWidth;
