@@ -19,7 +19,7 @@ module.exports = {
               }
           },
           {
-              test: /\.scss$/,
+              test: /\.(sa|sc|c)ss$/,
               use: [{
                   loader: "style-loader" // creates style nodes from JS strings
               }, {
@@ -28,7 +28,16 @@ module.exports = {
                   loader: "sass-loader" // compiles Sass to CSS
               }]
 
-          }
+          },
+          {
+            test: /\.(gif|png|jp(e*)g|svg)$/i,
+            use: [
+                'file-loader',
+                {
+                    loader: 'image-webpack-loader',
+                },
+            ]
+        },
       ]
   },
     devServer: {

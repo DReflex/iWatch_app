@@ -2,31 +2,7 @@ import React from 'react';
 import '../styles/navigation/main_nav.scss';
 
 class Main_nav extends React.Component{
-  // constructor(){
-  //   super();
-  //   this.handleScroll = this.handleScroll.bind(this)
-  // }
-  // componentDidMount(){
-  //   this.handleScroll();
-  //   document.addEventListener("scroll", this.handleScroll)
-  // }
-  // componentWillUnmount(){
-  //   document.removeEventListener("scroll", this.handleScroll)
-  // }
-  // handleScroll(e){
-  //   console.log("scrolling");
-  //   console.log(document.getElementsByClassName("fade-in-animation"));
-  //   let id = document.getElementById("nav");
-  //   let scroll =window.pageYOffset;
-  //   if(scroll > 0){
-  //     id.style.background = "#FFF";
-  //     id.style.padding = "0 65px";
-  //   }
-  //   else{
-  //     id.style.background = "#F3F3F3";
-  //     id.style.padding = "15px 65px";
-  //   }
-  // }
+ 
   render(){
     return(
       <div >
@@ -41,19 +17,19 @@ class Main_nav extends React.Component{
           <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul className="navbar-nav ">
               <li className="nav-item">
-                <a className="nav-link" href="#">Product</a>
+                <a className="nav-link" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
+                <a className="nav-link" href="/test">Test</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Reviews</a>
+                <a className="nav-link" href="#">Nothing</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
+                <a className="nav-link" href="#">Nothing</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
+                <a className="nav-link" href="#">Nothing</a>
               </li>
             </ul>
           </div>
